@@ -1,0 +1,19 @@
+metadata:
+    format: Lava-Test Test Definition 1.0
+    name: aktualizr-lite-network-outage
+    description: "Test network problems with aklite"
+    maintainer:
+        - milosz.wasilewski@foundries.io
+    os:
+        - openembedded
+    scope:
+        - functional
+    devices:
+        - imx8mmevk
+
+params:
+    PATTERN: "ostree-pull"
+
+run:
+    steps:
+        - ./network-outage.sh "${PATTERN}"
